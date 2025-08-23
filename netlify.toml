@@ -1,0 +1,36 @@
+[build]
+  command = "npm run build"  # Build command
+  publish = "dist/public"    # Output directory - updated to match Vite's configuration
+
+# Static assets handling
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
+  status = 200
+
+# Success page redirect must come first
+[[redirects]]
+  from = "/success.html"
+  to = "/success.html"
+  status = 200
+
+# General single-page app redirect
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Enable large media uploads and form handling
+[build.processing]
+  skip_processing = false
+[build.processing.images]
+  compress = true
+[build.processing.html]
+  pretty_urls = true
+
+# Form notifications
+[forms]
+  [forms."contact"]
+    name = "Contact Form"
+    subject = "New message from your website"
+    success_url = "/success.html"

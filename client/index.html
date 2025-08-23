@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Michael's Shoe Repair | Carroll Gardens, Brooklyn</title>
+  </head>
+  <body>
+    <!-- A hidden form for Netlify to detect during build time -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <select name="service">
+        <option value="shoe-repair">Shoe Repair</option>
+        <option value="watch-repair">Watch Repair</option>
+        <option value="jewelry-repair">Jewelry Repair</option>
+        <option value="sole-replacement">Sole Replacement</option>
+        <option value="heel-repair">Heel Repair</option>
+        <option value="leather-restoration">Leather Restoration</option>
+        <option value="stretching">Shoe Stretching</option>
+        <option value="orthopedic">Orthopedic Modifications</option>
+        <option value="sneaker-cleaning">Sneaker Cleaning</option>
+        <option value="other">Other</option>
+      </select>
+      <textarea name="message"></textarea>
+      <input type="file" name="image" />
+    </form>
+    
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <!-- This is a replit script which adds a banner on the top of the page when opened in development mode outside the replit environment -->
+    <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
+  </body>
+</html>
